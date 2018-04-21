@@ -1,0 +1,35 @@
+export const colors = {
+  white: 'hsl(0, 0%, 100%)',
+  black: 'hsl(0, 0%, 4%)',
+  whiteTer: 'hsl(0, 0%, 96%)',
+  greyDarker: 'hsl(0, 0%, 21%)',
+  turquoise: 'hsl(171, 100%, 41%)',
+  blue: 'hsl(217, 71%, 53%)',
+  cyan: 'hsl(204, 86%, 53%)',
+  green: 'hsl(141, 71%, 48%)',
+  yellow: 'hsl(48, 100%, 67%)',
+  red: 'hsl(348, 100%, 61%)',
+
+  blackBis: 'hsl(0, 0%, 7%)',
+  blackTer: 'hsl(0, 0%, 14%)',
+  greyDark: 'hsl(0, 0%, 29%)',
+  greyLight: 'hsl(0, 0%, 71%)',
+  greyLighter: 'hsl(0, 0%, 86%)',
+  whiteBis: 'hsl(0, 0%, 98%)  ',
+  turnOn: '#0ADDD3',
+  on: '#9BC148',
+  off: '#B4B4B4',
+};
+
+export const colorsInverted = {
+  white: colors.black,
+  black: colors.white,
+  whiteTer: 'hsl(0, 0%, 96%)',
+  greyDarker: 'hsl(0, 0%, 21%)',
+  turquoise: colors.white,
+  blue: colors.white,
+  cyan: colors.white,
+  green: colors.white,
+  yellow: 'rgba(0, 0, 0, 0.7)',
+  red: colors.white,
+};
