@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { VictoryChart, VictoryAxis, VictoryLine, VictoryArea, VictoryTheme, VictoryScatter } from 'victory-native';
+import React from 'react';
+import { VictoryChart, VictoryAxis, VictoryArea, VictoryScatter } from 'victory-native';
 import { colors } from '../../styles/colors';
 
 const defaultData = [

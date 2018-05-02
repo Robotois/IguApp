@@ -70,11 +70,11 @@ export const list = [
       type: 'material-community',
     },
   },
-  // {
-  //   name: 'Lampara',
-  //   icon: {
-  //     name: 'wall-sconce-flat',
-  //     type: 'material-community',
-  //   },
-  // },
+  {
+    name: 'dryer',
+    icon: {
+      name: 'tumble-dryer',
+      type: 'material-community',
+    },
+  },
 ];

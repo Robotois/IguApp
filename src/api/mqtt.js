@@ -13,7 +13,7 @@ const myStorage = {
 let connected = false;
 
 // Create a client instance
-const client = new Client({ uri: 'ws://192.168.1.68:1884/', clientId: 'IguApp', storage: myStorage });
+const client = new Client({ uri: 'ws://192.168.1.35:1884/', clientId: 'IguApp', storage: myStorage });
 
 const connectionLost = (responseObject) => {
   if (responseObject.errorCode !== 0) {

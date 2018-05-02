@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 15,
     minHeight: 75,
-    // paddingBottom: 50
   },
 });
 
@@ -23,13 +22,13 @@ const StatValue = ({ value, period }) => (
       {period}
     </Text>
   </View>
-)
+);
 
-const Stats = () => (
+const Stats = ({ weekStats, monthStats }) => (
   <View style={styles.row}>
-    <StatValue value={15} period="Hoy" />
-    <StatValue value={50} period="Semanal" />
-    <StatValue value={180} period="Mensual" />
+    <StatValue value={weekStats.today || 0} period="Hoy" />
+    <StatValue value={weekStats.total || 0} period="Semanal" />
+    <StatValue value={monthStats || 0} period="Mensual" />
   </View>
 );
 
