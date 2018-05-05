@@ -15,14 +15,19 @@ const IconComponent = ({ active, navigate }) => (
   />
 );
 
-const GroupItem = ({ title, active, navigate, ...rest }) => (
+const GroupItem = ({
+  id,
+  title,
+  active,
+  navigate,
+}) => (
   <View style={styles.groupItem}>
     <IconComponent
       active={active}
       navigate={() => navigate('Group', {
+        groupId: id,
         title,
         active,
-        ...rest
       })}
     />
     <Text style={styles.itemTitle}>

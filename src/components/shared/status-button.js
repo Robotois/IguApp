@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
   StyleSheet,
   TouchableOpacity,
@@ -24,7 +24,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const MyButton = ({ text, action }) => (
+const statusMap = {
+  1: 'ON',
+  0: 'OFF',
+};
+
+const MyButton = ({ status, action }) => (
   <TouchableOpacity
     style={{
       alignItems: 'center',
@@ -33,16 +38,16 @@ const MyButton = ({ text, action }) => (
       borderColor: colors.blue,
       borderRadius: 20,
       justifyContent: 'center',
-      backgroundColor: text === 'ON' ? colors.blue : colors.greyDark,
+      backgroundColor: status ? colors.blue : colors.greyDark,
     }}
     onPress={action}
   >
-    <Text style={styles.text}>{text}</Text>
+    <Text style={styles.text}>{statusMap[status]}</Text>
   </TouchableOpacity>
 );
 
 MyButton.defaultProps = {
-  text: 'ON',
+  status: true,
 };
 
 

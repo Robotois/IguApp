@@ -1,3 +1,12 @@
+export const devicesByGroup = (devices, groupId) =>
+  devices.filter(dev => dev.groupId === groupId);
+
+export const statsByGroup = (stats, groupId) =>
+  stats.find(stat => stat.groupId === groupId) || {};
+
+export const getGroup = (groups, groupId) =>
+  groups.find(group => group.id === groupId);
+
 const weekDays = {
   lun: 'Lun',
   mar: 'Mar',

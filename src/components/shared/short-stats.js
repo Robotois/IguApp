@@ -24,11 +24,11 @@ const StatValue = ({ value, period }) => (
   </View>
 );
 
-const Stats = ({ weekStats, monthStats }) => (
+const Stats = ({ stats }) => (
   <View style={styles.row}>
-    <StatValue value={weekStats.today || 0} period="Hoy" />
-    <StatValue value={weekStats.total || 0} period="Semanal" />
-    <StatValue value={monthStats || 0} period="Mensual" />
+    <StatValue value={stats.today || 0} period="Hoy" />
+    <StatValue value={stats.total || 0} period="Semanal" />
+    <StatValue value={stats.month || 0} period="Mensual" />
   </View>
 );
 

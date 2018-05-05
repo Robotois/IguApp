@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 
 import Home from '../components/home';
-import Group from '../components/group';
+import GroupContainer from '../containers/group-container';
 import Stats from '../components/stats';
 
 const RootStack = StackNavigator(
@@ -10,7 +10,7 @@ const RootStack = StackNavigator(
       screen: Home,
     },
     Group: {
-      screen: Group,
+      screen: GroupContainer,
     },
     Stats: {
       screen: Stats,

@@ -6,9 +6,9 @@ export const GET_GROUPS = gql`
       id
       title
       active
-      monthStats
-      weekStats
+      stats
       devices {
+        id
         iguId
         title
         active

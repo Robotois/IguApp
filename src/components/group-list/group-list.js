@@ -4,18 +4,20 @@ import { Query } from 'react-apollo';
 
 import GroupItem from './group-item';
 import styles from './styles';
-import { GET_GROUPS } from '../../apollo/queries/index';
+import { GET_GROUPS } from '../../apollo/local/queries';
 
 const GroupList = ({ navigation }) => (
   <Query query={GET_GROUPS}>
-    {({ loading, error, data: { groups } }) => {
-      // console.log('groups:', groups);
+    {({ loading, error, data }) => {
+      // console.log('render GroupList!', navigation);
+      // console.log('group list:', data);
       if (loading) return (<Text>Loading</Text>);
       if (error) return (<Text>Error ...</Text>);
+      if (!data.localGroups) return (<Text>Loading</Text>);
       return (
         <View style={styles.groupList}>
           {
-            groups.map(group => (
+            data.localGroups.map(group => (
               <GroupItem
                 key={group.title}
                 {...group}
