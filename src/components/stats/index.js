@@ -13,14 +13,14 @@ import styles from './styles';
 const Stats = ({ navigation }) => (
   <Query query={GET_GLOBAL_STATS}>
     {({ loading, error, data: { globalStats } }) => {
-      console.log('Global Stats:', globalStats);
+      // console.log('Global Stats:', globalStats);
       if (loading) return (<Text>Loading...</Text>);
       if (error) return (<Text>Error</Text>);
       return (
         <View style={styles.global}>
           <ScrollView>
             <Chart data={weekChartValues(globalStats)} />
-            <ShortStats monthStats={globalStats.monthStats} weekStats={globalStats} />
+            <ShortStats stats={globalStats} />
             <GroupList navigation={navigation} />
           </ScrollView>
         </View>);
